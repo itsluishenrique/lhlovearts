@@ -1,0 +1,25 @@
+{
+  "name": "LH Love Arts",
+  "version": "1.0.0",
+  "description": "Landing page LH Love Arts",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsluishenrique/lhlovearts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/itsluishenrique/lhlovearts/issues"
+  },
+  "homepage": "https://github.com/itsluishenrique/lhlovearts#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

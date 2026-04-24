@@ -24,7 +24,10 @@ body {
 .container {
   position:relative;
   width:100%;
-  height:100vh;
+  min-height:100vh; /* melhor que height fixa */
+  display:flex;
+  align-items:center;
+  justify-content:center;
   overflow:hidden;
 }
 
@@ -32,46 +35,43 @@ body {
 .container img {
   width:100%;
   height:100%;
-  object-fit:cover; /* preenche sem distorcer */
-  object-position:center;
+  object-fit:cover;
 }
 
-/* BOTÃO */
-.btn {
-  position:absolute;
-  bottom:40px;
-  left:50%;
-  transform:translateX(-50%);
-  padding:14px 28px;
-  border-radius:30px;
-  background: linear-gradient(45deg,#FF4D6D,#D4AF37);
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:16px;
-}
+/* MOBILE */
+@media (max-width: 600px) {
+  .container {
+    min-height:100dvh;
+    background-image: url("lh-love-arts-mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-/* 📱 MOBILE AJUSTE */
-@media (max-width: 768px) {
-  .btn {
-    bottom:25px;
-    font-size:14px;
-    padding:12px 22px;
+  .container img {
+    display:none;
   }
 }
 
-/* 📲 TABLET AJUSTE */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .btn {
-    bottom:30px;
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    background-image: url("lh-love-arts-tablet.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .container img {
+    display:none;
   }
 }
 
 /* 💻 DESKTOP */
 @media (min-width: 1025px) {
-  .container img {
-    object-fit: contain; /* evita distorção */
-    background:#000;
+  .container {
+    background-size: contain;
+    background-color:#000;
   }
 }
 </style>
@@ -80,7 +80,7 @@ body {
 <body>
 
 <div class="container">
-  <img src="lh-love-arts.png" alt="LH Love Arts">
+  <img src="lh-love-arts-desktop.png" alt="LH Love Arts">
 </div>
 
 </body>
